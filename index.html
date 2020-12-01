@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://cdn.winefamly.com/images/magento/test/pub/media/favicon/default/favicon.ico">
+    <title>Winefamly</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- STYLING FOR HEADER MENU. THIS IS JUST A PLACEHOLDER, AND IS NOT PART OF THE ASSIGNMENT -->
+    <style>
+        header {
+            position: relative;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        header img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        footer {
+            position: relative;
+            background-color: rgba(190, 190, 190, 0.397);
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="assets/images/menu.png" alt="menu">
+    </header>
+    <div class="page-wrapper">
+        <div class="product-top-wrapper">
+            <section class="product-top">
+                <div class="product-top__image">
+                    <div class="wishlist-product-action">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="assets/images/wine.png" alt="wine">
+                    </div>
+                    <div class="product-rate">
+                        <div class="product-rate__review">
+                            <button onclick="closeForm(); return false" class="review-close" type="button">x</button>
+                            <h4 class="review-heading">Var vinen god?</h4>
+                            <div class="review-buttons">
+                                <button class="review-button like-button" title="like"
+                                    onclick="prepareForm(); return false" name="like" value="like">
+                                    <span class="like-icon"></span>
+                                </button>
+                                <button class="review-button dislike-button" title="dislike"
+                                    onclick="prepareForm(); return false" name="dislike" value="dislike">
+                                    <span class="dislike-icon"></span>
+                                </button>
+                            </div>
+                            <div class="review-form-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-top__product">
+                    <p class="label label-type">ØKO</p>
+                    <h1 class="product-title">Pascal Prunier-Bonheur, Petit Bonheur Coteaux Bourguignons Chardonnay 2018
+                    </h1>
+                    <ul class="product-details">
+                        <li class="flag">🇫🇷</li>
+                        <li class="country"><a class="underline">France</a></li>
+                        <li class="category"><a class="underline">Beaujolais</a></li>
+                        <li class="category"><a class="underline">Redwine</a></li>
+                    </ul>
+                    <div class="product-review">
+                        <i class="far fa-heart"></i>
+                        <p>Endnu ingen bedømmelser</p>
+                    </div>
+                </div>
+                <div class="product-top__shopping">
+                    <div class="product-top__shopping-wrapper">
+                        <div class="upgrade">
+                        </div>
+                        <div class="save-price">
+                            <span>Spar:</span>
+                            <span>&nbsp;23,44 kr</span>
+                        </div>
+                        <div class="product-price">
+                            <p>Pris per flaske</p>
+                            <div class="current-price">
+                                <span>38,33 kr</span>
+                            </div>
+                            <div class="regular-price">
+                                <span>Normal price:</span>
+                                <del>88,98 kr.</del>
+                            </div>
+                        </div>
+                        <div class="product-info-price"></div>
+                        <div class="product-about-wf">
+                            <ul class="product-about-wf">
+                                <li class="icon icon__delivery">Free delivery</li>
+                                <li class="icon icon__price-guarantee">Price guarantee</li>
+                                <li class="icon icon__order-amount">No min. orders</li>
+                            </ul>
+                        </div>
+                        <div class="product-add-form">
+                            <div class="product-add-form">
+                                <form data-product-sku="31527" action="#" method="post" id="product_addtocart_form"
+                                    novalidate="novalidate">
+                                    <input type="hidden" name="item" value="#">
+                                    <div class="add-to-cart">
+                                        <div class="form-group quantity">
+                                            <button type="button" data-quantity-subtract="">-</button>
+                                            <input type="number" name="qty" id="qty" value="1" title="#"
+                                                class="input-text qty">
+                                            <button type="button" data-quantity-add="">+</button>
+                                        </div>
+                                        <button type="submit" title="submit" class="action primary tocart"
+                                            id="product-addtocart-button">
+                                            <span class="to-cart-icon"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="stock-status">
+                            <div class="stock-icon in-stock"></div>
+                            <span class="stock-quantity">1123 stk. på lager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-aromas">
+                    <p class="label">Vinens aromaer:</p>
+                    <div class="aroma">
+                        <img src="https://cdn.winefamly.com/images/aromas/roed_frugt.png" alt="aroma-image">
+                        <p>Grønsagsagtigt</p>
+                    </div>
+                    <div class="aroma">
+                        <img src="https://cdn.winefamly.com/images/aromas/blomstret.png" alt="aroma-image">
+                        <p>Tørret/kogt frugt</p>
+                    </div>
+                    <div class="aroma">
+                        <img src="https://cdn.winefamly.com/images/aromas/andre_krydderier.png" alt="aroma-image">
+                        <p>Søde krydderier</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <main></main>
+    </div>
+    <footer></footer>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+</body>
+
+</html>
